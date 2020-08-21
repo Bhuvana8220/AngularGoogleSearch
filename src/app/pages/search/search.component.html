@@ -1,0 +1,17 @@
+<div class="pt-5">
+    <form [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
+        <div class="form-group">
+            <label for="search">Search</label>
+            <input type="search" class="form-control" id="search" aria-describedby="search" formControlName="search">
+            <small *ngIf="showError('search','required')" class="text-danger">Search input is required.</small>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!searchForm.valid">Submit</button>
+    </form>
+    <div *ngIf="searchData != null && searchData.length > 0">
+        <ul class="list-group list-group-flush mt-5 mb-3">
+            <li class="list-group-item" *ngFor="let search of searchData; trackBy: searchDataTrackBy">{{search}}</li>
+        </ul>
+        <app-pagination [totalRecords]="60" [recordsPerPage]="10" (pageChange)="searchPageChange($event)"></app-pagination>
+    </div>
+</div>
+<app-loader *ngIf="dataLoading"></app-loader>
