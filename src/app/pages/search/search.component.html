@@ -1,9 +1,10 @@
-<div class="pt-5">
+<div class="py-5">
+    <app-error></app-error>
     <form [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
         <div class="form-group">
             <label for="search">Search</label>
             <input type="search" class="form-control" id="search" aria-describedby="search" formControlName="search">
-            <small *ngIf="showError('search','required')" class="text-danger">Search input is required.</small>
+            <small *ngIf="showValidationError('search','required')" class="text-danger">Search input is required.</small>
         </div>
         <button type="submit" class="btn btn-primary" [disabled]="!searchForm.valid">Submit</button>
     </form>

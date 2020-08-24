@@ -2,8 +2,7 @@ import { Component, OnChanges, Input, EventEmitter, Output } from '@angular/core
 
 @Component({
   selector: 'app-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  templateUrl: './pagination.component.html'
 })
 export class PaginationComponent implements OnChanges {
   @Input() totalRecords = 0;

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Quick Google Search",
+  "version": "1.0",
+  "description": "A shortcut to google search from your page.",
+  "icons": {
+    "16": "assets/icons/Icon-16.png",
+    "32": "assets/icons/Icon-32.png",
+    "48": "assets/icons/Icon-48.png",
+    "128": "assets/icons/Icon-128.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html"
+  }
+}

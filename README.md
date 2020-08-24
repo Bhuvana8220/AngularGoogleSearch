@@ -14,6 +14,18 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Add as Chrome Extension
+
+Once the build is complete the files are stored in the `dist/google-search` folder. 
+
+Open Chrome Browser and go to extensions page. Open the `Extension Management page` from the menu or navigate to `chrome://extensions`.
+
+Enable Developer Mode by clicking the toggle switch next to `Developer mode`.
+
+Click the `Load unpacked` button and select the extension directory `dist/google-search`.
+
+Now you shoud be able to see the extension in the Chrome.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
